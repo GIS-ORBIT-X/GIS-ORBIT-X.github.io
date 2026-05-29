@@ -7,22 +7,26 @@
 
 <title>GIS ORBIT.X Payment Portal</title>
 
-<link rel="icon" href="gis-orbitx-favicon.webp">
+<link rel="icon" type="image/webp" href="./gis-orbitx-favicon.webp">
+
+<meta name="description" content="GIS ORBIT.X Official Banking Information">
 
 <!-- Open Graph -->
 <meta property="og:title" content="GIS ORBIT.X Payment Portal">
 <meta property="og:description" content="Official Banking Information • Sohar International • Bank Muscat • Mobile Transfer">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://gis-orbit-x.github.io/">
-<meta property="og:image" content="https://gis-orbit-x.github.io/bank-preview-gis.webp">
+<meta property="og:url" content="https://gis-orbit-x.github.io/GIS-ORBIT-X/">
+<meta property="og:image" content="https://gis-orbit-x.github.io/GIS-ORBIT-X/bank-preview-gis.webp">
+<meta property="og:image:secure_url" content="https://gis-orbit-x.github.io/GIS-ORBIT-X/bank-preview-gis.webp">
+<meta property="og:image:type" content="image/webp">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 
-<!-- Twitter -->
+<!-- Twitter / X -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="GIS ORBIT.X Payment Portal">
 <meta name="twitter:description" content="Official Banking Information">
-<meta name="twitter:image" content="https://gis-orbit-x.github.io/bank-preview-gis.webp">
+<meta name="twitter:image" content="https://gis-orbit-x.github.io/GIS-ORBIT-X/bank-preview-gis.webp">
 
 <meta name="theme-color" content="#B71C1C">
 
@@ -34,11 +38,9 @@
 --oman-red:#B71C1C;
 --oman-red-dark:#921515;
 --oman-gold:#C9A227;
---ivory:#F8F5EF;
---white:#FFFFFF;
---dark:#202020;
---gray:#6B7280;
+--white:#ffffff;
 --green:#25D366;
+--dark:#202020;
 }
 
 *{
@@ -49,346 +51,173 @@ font-family:'Cairo',sans-serif;
 }
 
 body{
-
-background:
-linear-gradient(
-135deg,
-#faf7f1,
-#f6f1e7,
-#f2eadf
-);
-
+background:#f7f4ee;
 padding:20px;
-
 min-height:100vh;
-
 }
 
 .container{
-
 max-width:760px;
 margin:auto;
-
 }
 
 .header{
-
-background:
-linear-gradient(
-135deg,
-var(--oman-red-dark),
-var(--oman-red)
-);
-
+background:linear-gradient(135deg,#921515,#B71C1C);
 border-radius:32px;
-
 overflow:hidden;
-
-box-shadow:
-0 15px 45px rgba(0,0,0,.12);
-
 margin-bottom:22px;
-
+box-shadow:0 15px 45px rgba(0,0,0,.12);
 }
 
 .gold-line{
-
 height:4px;
-
-background:
-linear-gradient(
-90deg,
-transparent,
-var(--oman-gold),
-transparent
-);
-
+background:linear-gradient(90deg,transparent,#C9A227,transparent);
 }
 
 .header-content{
-
 padding:35px 25px;
-
 text-align:center;
-
 }
 
 .brand-logo{
-
 width:95px;
 height:95px;
-
-object-fit:cover;
-
-border-radius:24px;
-
+object-fit:contain;
 background:white;
-
 padding:8px;
-
+border-radius:22px;
 margin-bottom:18px;
-
 }
 
 .portal-title{
-
 font-size:36px;
-
 font-weight:900;
-
 line-height:1.1;
-
 color:white;
-
 }
 
 .portal-subtitle{
-
 margin-top:10px;
-
 color:rgba(255,255,255,.9);
-
-font-size:15px;
-
 }
 
 .account-holder{
-
 background:white;
-
 border-radius:28px;
-
 padding:25px;
-
 text-align:center;
-
 margin-bottom:20px;
-
-box-shadow:
-0 8px 25px rgba(0,0,0,.05);
-
+box-shadow:0 8px 25px rgba(0,0,0,.05);
 }
 
 .account-holder small{
-
 display:block;
-
-font-size:13px;
-
+margin-bottom:10px;
 color:#888;
-
-margin-bottom:8px;
-
 }
 
 .account-holder h2{
-
 font-size:34px;
-
 font-weight:900;
-
-color:var(--dark);
-
 }
 
 .verified{
-
 display:inline-block;
-
 margin-top:12px;
-
 padding:8px 16px;
-
-background:#eef8f0;
-
-color:#198754;
-
 border-radius:50px;
-
+background:#eef8f0;
+color:#198754;
 font-size:13px;
-
 font-weight:700;
-
 }
 
 .bank-card{
-
 background:white;
-
 border-radius:28px;
-
 padding:28px;
-
 margin-bottom:20px;
-
-box-shadow:
-0 8px 25px rgba(0,0,0,.05);
-
-transition:.25s;
-
-}
-
-.bank-card:hover{
-
-transform:translateY(-2px);
-
+box-shadow:0 8px 25px rgba(0,0,0,.05);
 }
 
 .bank-logo{
-
+display:block;
+margin:auto;
 width:120px;
 height:120px;
-
 object-fit:contain;
-
-display:block;
-
-margin:auto;
-
 margin-bottom:18px;
-
 }
 
 .bank-name{
-
 text-align:center;
-
 font-size:28px;
-
 font-weight:900;
-
-color:var(--dark);
-
 margin-bottom:18px;
-
 }
 
 .account-box{
-
 background:#faf8f4;
-
 border:1px solid #ece5d8;
-
 border-radius:22px;
-
 padding:20px;
-
 }
 
 .account-number{
-
-font-size:34px;
-
-font-weight:900;
-
 text-align:center;
-
-color:var(--oman-red);
-
-word-break:break-all;
-
+font-size:34px;
+font-weight:900;
+color:#B71C1C;
 margin-bottom:16px;
-
+word-break:break-all;
 }
 
 .btn{
-
 width:100%;
-
 height:60px;
-
 border:none;
-
 border-radius:16px;
-
 font-size:17px;
-
 font-weight:800;
-
 cursor:pointer;
-
-transition:.25s;
-
 }
 
 .copy-btn{
-
-background:var(--oman-red);
-
+background:#B71C1C;
 color:white;
-
-}
-
-.copy-btn:hover{
-
-background:var(--oman-red-dark);
-
-}
-
-.success{
-
-background:#198754 !important;
-
 }
 
 .whatsapp-btn{
-
 display:flex;
-
-align-items:center;
 justify-content:center;
-
+align-items:center;
 margin-top:12px;
-
-text-decoration:none;
-
-background:var(--green);
-
+background:#25D366;
 color:white;
-
+text-decoration:none;
 }
 
-.whatsapp-btn:hover{
-
-background:#1fb857;
-
+.success{
+background:#198754 !important;
 }
 
 .footer{
-
 background:white;
-
-border-radius:28px;
-
 padding:25px;
-
+border-radius:28px;
 text-align:center;
-
-box-shadow:
-0 8px 25px rgba(0,0,0,.05);
-
-margin-top:20px;
-
+box-shadow:0 8px 25px rgba(0,0,0,.05);
 }
 
 .footer-title{
-
 font-size:22px;
-
 font-weight:900;
-
-color:var(--oman-red);
-
-margin-bottom:5px;
-
+color:#B71C1C;
 }
 
 .footer-text{
-
-font-size:14px;
-
 color:#777;
-
+font-size:14px;
 }
 
 @media(max-width:600px){
@@ -418,7 +247,6 @@ font-size:24px;
 
 </style>
 </head>
-
 <body>
 
 <div class="container">
@@ -430,7 +258,7 @@ font-size:24px;
 <div class="header-content">
 
 <img
-src="gis-orbitx-favicon.webp"
+src="./gis-orbitx-favicon.webp"
 alt="GIS ORBIT.X"
 class="brand-logo">
 
@@ -444,7 +272,6 @@ Official Banking Information
 </div>
 
 </div>
-
 </div>
 
 <div class="account-holder">
@@ -462,7 +289,7 @@ Official Banking Information
 <div class="bank-card">
 
 <img
-src="Sohar_International.webp"
+src="./Sohar_International.webp"
 alt="Sohar International"
 class="bank-logo">
 
@@ -483,13 +310,12 @@ Copy Account Number
 </button>
 
 </div>
-
 </div>
 
 <div class="bank-card">
 
 <img
-src="bank-muscat-gis.webp"
+src="./bank-muscat-gis.webp"
 alt="Bank Muscat"
 class="bank-logo">
 
@@ -510,13 +336,12 @@ Copy Account Number
 </button>
 
 </div>
-
 </div>
 
 <div class="bank-card">
 
 <img
-src="phone-transfer-gis.webp"
+src="./phone-transfer-gis.webp"
 alt="Mobile Transfer"
 class="bank-logo">
 
@@ -537,16 +362,13 @@ Copy Mobile Number
 </button>
 
 <a
-href="https://wa.me/96876454193?text=Hello%20Nasser%20Ahmed,%20I%20have%20completed%20the%20payment."
+href="https://wa.me/96876454193"
 target="_blank"
 class="btn whatsapp-btn">
-
 Open WhatsApp
-
 </a>
 
 </div>
-
 </div>
 
 <div class="footer">
@@ -569,7 +391,7 @@ function copyText(text,button){
 
 navigator.clipboard.writeText(text);
 
-const originalText=button.innerHTML;
+const original=button.innerHTML;
 
 button.innerHTML='✓ Copied Successfully';
 
@@ -577,13 +399,23 @@ button.classList.add('success');
 
 setTimeout(()=>{
 
-button.innerHTML=originalText;
+button.innerHTML=original;
 
 button.classList.remove('success');
 
 },2000);
 
 }
+
+document.querySelectorAll('img').forEach(img=>{
+
+img.onerror=()=>{
+
+console.error('Missing Image:',img.src);
+
+};
+
+});
 
 </script>
 
