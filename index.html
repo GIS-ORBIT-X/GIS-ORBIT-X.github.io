@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Bank Transfer Details</title>
+
+<link rel="icon" href="./gis-orbitx-favicon.webp">
+
+<meta property="og:title" content="Bank Transfer Details">
+<meta property="og:description" content="Sohar International • Bank Muscat • Mobile Transfer">
+<meta property="og:image" content="./bank-preview-gis.webp">
+<meta property="og:type" content="website">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="./bank-preview-gis.webp">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#f4f6fb;
+padding:20px;
+display:flex;
+justify-content:center;
+}
+
+.container{
+width:100%;
+max-width:520px;
+}
+
+.card{
+background:#fff;
+border-radius:30px;
+padding:30px;
+box-shadow:0 10px 35px rgba(0,0,0,.08);
+}
+
+.title{
+text-align:center;
+font-size:48px;
+font-weight:900;
+line-height:1.05;
+margin-bottom:35px;
+}
+
+.label{
+font-size:15px;
+font-weight:700;
+color:#666;
+margin-bottom:10px;
+}
+
+.name{
+font-size:28px;
+margin-bottom:35px;
+}
+
+.bank{
+margin-bottom:30px;
+}
+
+.bank-title{
+display:flex;
+align-items:center;
+gap:15px;
+font-size:22px;
+font-weight:700;
+color:#555;
+margin-bottom:15px;
+}
+
+.logo{
+width:60px;
+height:60px;
+border-radius:50%;
+object-fit:cover;
+background:#fff;
+border:1px solid #eee;
+box-shadow:0 4px 15px rgba(0,0,0,.12);
+}
+
+.account{
+background:#f7f8fc;
+padding:20px;
+border-radius:22px;
+}
+
+.number{
+font-size:24px;
+font-weight:900;
+margin-bottom:15px;
+word-break:break-all;
+}
+
+.copy-btn{
+width:100%;
+border:none;
+background:#000;
+color:#fff;
+padding:16px;
+border-radius:16px;
+font-size:16px;
+font-weight:700;
+cursor:pointer;
+}
+
+.copy-btn:active{
+transform:scale(.98);
+}
+
+.success{
+background:#16a34a !important;
+}
+
+.whatsapp-btn{
+display:block;
+width:100%;
+margin-top:12px;
+text-align:center;
+text-decoration:none;
+background:#25D366;
+color:#fff;
+padding:16px;
+border-radius:16px;
+font-size:16px;
+font-weight:700;
+}
+
+.footer{
+margin-top:25px;
+text-align:center;
+font-size:13px;
+color:#888;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="card">
+
+<div class="title">
+BANK<br>
+TRANSFER<br>
+DETAILS
+</div>
+
+<div class="label">
+Account Holder Name
+</div>
+
+<div class="name">
+Nasser Ahmed
+</div>
+
+<!-- Sohar -->
+
+<div class="bank">
+
+<div class="bank-title">
+<img src="./Sohar_International.webp" alt="Sohar International" class="logo">
+<span>Sohar International</span>
+</div>
+
+<div class="account">
+
+<div class="number">
+030010163746
+</div>
+
+<button class="copy-btn"
+onclick="copyText('030010163746',this)">
+Copy Account Number
+</button>
+
+</div>
+
+</div>
+
+<!-- Bank Muscat -->
+
+<div class="bank">
+
+<div class="bank-title">
+<img src="./bank-muscat-gis.webp" alt="Bank Muscat" class="logo">
+<span>Bank Muscat</span>
+</div>
+
+<div class="account">
+
+<div class="number">
+0357080217780014
+</div>
+
+<button class="copy-btn"
+onclick="copyText('0357080217780014',this)">
+Copy Account Number
+</button>
+
+</div>
+
+</div>
+
+<!-- Mobile Transfer -->
+
+<div class="bank">
+
+<div class="bank-title">
+<img src="./phone-transfer-gis.webp" alt="Phone Transfer" class="logo">
+<span>Mobile Transfer</span>
+</div>
+
+<div class="account">
+
+<div class="number">
+76454193
+</div>
+
+<button class="copy-btn"
+onclick="copyText('76454193',this)">
+Copy Mobile Number
+</button>
+
+<a
+href="https://wa.me/96876454193"
+target="_blank"
+class="whatsapp-btn">
+Open WhatsApp
+</a>
+
+</div>
+
+</div>
+
+<div class="footer">
+GIS ORBIT.X • Secure Payment Information
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+function copyText(text, button){
+
+navigator.clipboard.writeText(text);
+
+const originalText = button.innerHTML;
+
+button.innerHTML = "Copied ✓";
+button.classList.add("success");
+
+setTimeout(() => {
+button.innerHTML = originalText;
+button.classList.remove("success");
+},2000);
+
+}
+
+</script>
+
+</body>
+</html>
