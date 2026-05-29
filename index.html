@@ -1,145 +1,419 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Bank Transfer Details</title>
+<title>GIS ORBIT.X Payment Portal</title>
 
-<link rel="icon" href="./gis-orbitx-favicon.webp">
+<link rel="icon" href="gis-orbitx-favicon.webp">
 
-<meta property="og:title" content="Bank Transfer Details">
-<meta property="og:description" content="Sohar International • Bank Muscat • Mobile Transfer">
-<meta property="og:image" content="./bank-preview-gis.webp">
+<!-- Open Graph -->
+<meta property="og:title" content="GIS ORBIT.X Payment Portal">
+<meta property="og:description" content="Official Banking Information • Sohar International • Bank Muscat • Mobile Transfer">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://gis-orbit-x.github.io/">
+<meta property="og:image" content="https://gis-orbit-x.github.io/bank-preview-gis.webp">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 
+<!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="./bank-preview-gis.webp">
+<meta name="twitter:title" content="GIS ORBIT.X Payment Portal">
+<meta name="twitter:description" content="Official Banking Information">
+<meta name="twitter:image" content="https://gis-orbit-x.github.io/bank-preview-gis.webp">
+
+<meta name="theme-color" content="#B71C1C">
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 
 <style>
+
+:root{
+--oman-red:#B71C1C;
+--oman-red-dark:#921515;
+--oman-gold:#C9A227;
+--ivory:#F8F5EF;
+--white:#FFFFFF;
+--dark:#202020;
+--gray:#6B7280;
+--green:#25D366;
+}
 
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial,sans-serif;
+font-family:'Cairo',sans-serif;
 }
 
 body{
-background:#f4f6fb;
+
+background:
+linear-gradient(
+135deg,
+#faf7f1,
+#f6f1e7,
+#f2eadf
+);
+
 padding:20px;
-display:flex;
-justify-content:center;
+
+min-height:100vh;
+
 }
 
 .container{
-width:100%;
-max-width:520px;
+
+max-width:760px;
+margin:auto;
+
 }
 
-.card{
-background:#fff;
-border-radius:30px;
-padding:30px;
-box-shadow:0 10px 35px rgba(0,0,0,.08);
+.header{
+
+background:
+linear-gradient(
+135deg,
+var(--oman-red-dark),
+var(--oman-red)
+);
+
+border-radius:32px;
+
+overflow:hidden;
+
+box-shadow:
+0 15px 45px rgba(0,0,0,.12);
+
+margin-bottom:22px;
+
 }
 
-.title{
+.gold-line{
+
+height:4px;
+
+background:
+linear-gradient(
+90deg,
+transparent,
+var(--oman-gold),
+transparent
+);
+
+}
+
+.header-content{
+
+padding:35px 25px;
+
 text-align:center;
-font-size:48px;
-font-weight:900;
-line-height:1.05;
-margin-bottom:35px;
+
 }
 
-.label{
-font-size:15px;
-font-weight:700;
-color:#666;
-margin-bottom:10px;
-}
+.brand-logo{
 
-.name{
-font-size:28px;
-margin-bottom:35px;
-}
+width:95px;
+height:95px;
 
-.bank{
-margin-bottom:30px;
-}
-
-.bank-title{
-display:flex;
-align-items:center;
-gap:15px;
-font-size:22px;
-font-weight:700;
-color:#555;
-margin-bottom:15px;
-}
-
-.logo{
-width:60px;
-height:60px;
-border-radius:50%;
 object-fit:cover;
-background:#fff;
-border:1px solid #eee;
-box-shadow:0 4px 15px rgba(0,0,0,.12);
+
+border-radius:24px;
+
+background:white;
+
+padding:8px;
+
+margin-bottom:18px;
+
 }
 
-.account{
-background:#f7f8fc;
-padding:20px;
-border-radius:22px;
-}
+.portal-title{
 
-.number{
-font-size:24px;
+font-size:36px;
+
 font-weight:900;
-margin-bottom:15px;
+
+line-height:1.1;
+
+color:white;
+
+}
+
+.portal-subtitle{
+
+margin-top:10px;
+
+color:rgba(255,255,255,.9);
+
+font-size:15px;
+
+}
+
+.account-holder{
+
+background:white;
+
+border-radius:28px;
+
+padding:25px;
+
+text-align:center;
+
+margin-bottom:20px;
+
+box-shadow:
+0 8px 25px rgba(0,0,0,.05);
+
+}
+
+.account-holder small{
+
+display:block;
+
+font-size:13px;
+
+color:#888;
+
+margin-bottom:8px;
+
+}
+
+.account-holder h2{
+
+font-size:34px;
+
+font-weight:900;
+
+color:var(--dark);
+
+}
+
+.verified{
+
+display:inline-block;
+
+margin-top:12px;
+
+padding:8px 16px;
+
+background:#eef8f0;
+
+color:#198754;
+
+border-radius:50px;
+
+font-size:13px;
+
+font-weight:700;
+
+}
+
+.bank-card{
+
+background:white;
+
+border-radius:28px;
+
+padding:28px;
+
+margin-bottom:20px;
+
+box-shadow:
+0 8px 25px rgba(0,0,0,.05);
+
+transition:.25s;
+
+}
+
+.bank-card:hover{
+
+transform:translateY(-2px);
+
+}
+
+.bank-logo{
+
+width:120px;
+height:120px;
+
+object-fit:contain;
+
+display:block;
+
+margin:auto;
+
+margin-bottom:18px;
+
+}
+
+.bank-name{
+
+text-align:center;
+
+font-size:28px;
+
+font-weight:900;
+
+color:var(--dark);
+
+margin-bottom:18px;
+
+}
+
+.account-box{
+
+background:#faf8f4;
+
+border:1px solid #ece5d8;
+
+border-radius:22px;
+
+padding:20px;
+
+}
+
+.account-number{
+
+font-size:34px;
+
+font-weight:900;
+
+text-align:center;
+
+color:var(--oman-red);
+
 word-break:break-all;
+
+margin-bottom:16px;
+
+}
+
+.btn{
+
+width:100%;
+
+height:60px;
+
+border:none;
+
+border-radius:16px;
+
+font-size:17px;
+
+font-weight:800;
+
+cursor:pointer;
+
+transition:.25s;
+
 }
 
 .copy-btn{
-width:100%;
-border:none;
-background:#000;
-color:#fff;
-padding:16px;
-border-radius:16px;
-font-size:16px;
-font-weight:700;
-cursor:pointer;
+
+background:var(--oman-red);
+
+color:white;
+
 }
 
-.copy-btn:active{
-transform:scale(.98);
+.copy-btn:hover{
+
+background:var(--oman-red-dark);
+
 }
 
 .success{
-background:#16a34a !important;
+
+background:#198754 !important;
+
 }
 
 .whatsapp-btn{
-display:block;
-width:100%;
+
+display:flex;
+
+align-items:center;
+justify-content:center;
+
 margin-top:12px;
-text-align:center;
+
 text-decoration:none;
-background:#25D366;
-color:#fff;
-padding:16px;
-border-radius:16px;
-font-size:16px;
-font-weight:700;
+
+background:var(--green);
+
+color:white;
+
+}
+
+.whatsapp-btn:hover{
+
+background:#1fb857;
+
 }
 
 .footer{
-margin-top:25px;
+
+background:white;
+
+border-radius:28px;
+
+padding:25px;
+
 text-align:center;
-font-size:13px;
-color:#888;
+
+box-shadow:
+0 8px 25px rgba(0,0,0,.05);
+
+margin-top:20px;
+
+}
+
+.footer-title{
+
+font-size:22px;
+
+font-weight:900;
+
+color:var(--oman-red);
+
+margin-bottom:5px;
+
+}
+
+.footer-text{
+
+font-size:14px;
+
+color:#777;
+
+}
+
+@media(max-width:600px){
+
+.portal-title{
+font-size:30px;
+}
+
+.account-holder h2{
+font-size:28px;
+}
+
+.bank-name{
+font-size:22px;
+}
+
+.bank-logo{
+width:90px;
+height:90px;
+}
+
+.account-number{
+font-size:24px;
+}
+
 }
 
 </style>
@@ -149,38 +423,61 @@ color:#888;
 
 <div class="container">
 
-<div class="card">
+<div class="header">
 
-<div class="title">
-BANK<br>
-TRANSFER<br>
-DETAILS
+<div class="gold-line"></div>
+
+<div class="header-content">
+
+<img
+src="gis-orbitx-favicon.webp"
+alt="GIS ORBIT.X"
+class="brand-logo">
+
+<div class="portal-title">
+GIS ORBIT.X<br>
+PAYMENT PORTAL
 </div>
 
-<div class="label">
-Account Holder Name
+<div class="portal-subtitle">
+Official Banking Information
 </div>
 
-<div class="name">
-Nasser Ahmed
 </div>
 
-<!-- Sohar -->
-
-<div class="bank">
-
-<div class="bank-title">
-<img src="./Sohar_International.webp" alt="Sohar International" class="logo">
-<span>Sohar International</span>
 </div>
 
-<div class="account">
+<div class="account-holder">
 
-<div class="number">
+<small>ACCOUNT HOLDER NAME</small>
+
+<h2>Nasser Ahmed</h2>
+
+<div class="verified">
+✓ Verified Payment Account
+</div>
+
+</div>
+
+<div class="bank-card">
+
+<img
+src="Sohar_International.webp"
+alt="Sohar International"
+class="bank-logo">
+
+<div class="bank-name">
+Sohar International
+</div>
+
+<div class="account-box">
+
+<div class="account-number">
 030010163746
 </div>
 
-<button class="copy-btn"
+<button
+class="btn copy-btn"
 onclick="copyText('030010163746',this)">
 Copy Account Number
 </button>
@@ -189,22 +486,25 @@ Copy Account Number
 
 </div>
 
-<!-- Bank Muscat -->
+<div class="bank-card">
 
-<div class="bank">
+<img
+src="bank-muscat-gis.webp"
+alt="Bank Muscat"
+class="bank-logo">
 
-<div class="bank-title">
-<img src="./bank-muscat-gis.webp" alt="Bank Muscat" class="logo">
-<span>Bank Muscat</span>
+<div class="bank-name">
+Bank Muscat
 </div>
 
-<div class="account">
+<div class="account-box">
 
-<div class="number">
+<div class="account-number">
 0357080217780014
 </div>
 
-<button class="copy-btn"
+<button
+class="btn copy-btn"
 onclick="copyText('0357080217780014',this)">
 Copy Account Number
 </button>
@@ -213,31 +513,36 @@ Copy Account Number
 
 </div>
 
-<!-- Mobile Transfer -->
+<div class="bank-card">
 
-<div class="bank">
+<img
+src="phone-transfer-gis.webp"
+alt="Mobile Transfer"
+class="bank-logo">
 
-<div class="bank-title">
-<img src="./phone-transfer-gis.webp" alt="Phone Transfer" class="logo">
-<span>Mobile Transfer</span>
+<div class="bank-name">
+Mobile Transfer
 </div>
 
-<div class="account">
+<div class="account-box">
 
-<div class="number">
+<div class="account-number">
 76454193
 </div>
 
-<button class="copy-btn"
+<button
+class="btn copy-btn"
 onclick="copyText('76454193',this)">
 Copy Mobile Number
 </button>
 
 <a
-href="https://wa.me/96876454193"
+href="https://wa.me/96876454193?text=Hello%20Nasser%20Ahmed,%20I%20have%20completed%20the%20payment."
 target="_blank"
-class="whatsapp-btn">
+class="btn whatsapp-btn">
+
 Open WhatsApp
+
 </a>
 
 </div>
@@ -245,7 +550,13 @@ Open WhatsApp
 </div>
 
 <div class="footer">
-GIS ORBIT.X • Secure Payment Information
+
+<div class="footer-title">
+GIS ORBIT.X
+</div>
+
+<div class="footer-text">
+Official Payment Information Portal
 </div>
 
 </div>
@@ -254,18 +565,22 @@ GIS ORBIT.X • Secure Payment Information
 
 <script>
 
-function copyText(text, button){
+function copyText(text,button){
 
 navigator.clipboard.writeText(text);
 
-const originalText = button.innerHTML;
+const originalText=button.innerHTML;
 
-button.innerHTML = "Copied ✓";
-button.classList.add("success");
+button.innerHTML='✓ Copied Successfully';
 
-setTimeout(() => {
-button.innerHTML = originalText;
-button.classList.remove("success");
+button.classList.add('success');
+
+setTimeout(()=>{
+
+button.innerHTML=originalText;
+
+button.classList.remove('success');
+
 },2000);
 
 }
